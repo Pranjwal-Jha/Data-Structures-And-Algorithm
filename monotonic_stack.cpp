@@ -8,7 +8,7 @@ vector<int> monotonic_stack(vector<int>& v){
   stack<int> s;
   vector<int> ans(v.size(),-1);
   for(int i=0;i<v.size();i++){
-    while(!s.empty() && v[s.top()]<v[i]){
+      while(!s.empty() && v[s.top()]<v[i]){
       ans[s.top()]=v[i]; //found the next greater element for the current element
       s.pop();
     }
